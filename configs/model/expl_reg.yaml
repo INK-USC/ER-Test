@@ -1,0 +1,53 @@
+_target_: src.model.lm.LanguageModel
+
+defaults:
+  - optimizer: hf_adamw
+  - scheduler: linear_with_warmup
+
+model: lm
+arch: google/bigbird-roberta-base
+dataset: ${data.dataset}
+
+num_freeze_layers: 0
+freeze_epochs: -1
+
+expl_reg: True
+expl_reg_freq: 1
+task_wt: 1.0
+
+explainer_type: attr_algo
+attr_algo: null
+
+pos_expl_criterion: bce
+pos_expl_margin: 0.1
+pos_expl_wt: 0.5
+
+neg_expl_criterion: l1
+neg_expl_margin: null
+neg_expl_wt: 0.0
+
+ig_steps: null
+internal_batch_size: null
+gradshap_n_samples: null
+gradshap_stdevs: null
+
+train_topk: [1, 5, 10, 20, 50]
+eval_topk: [1, 5, 10, 20, 50]
+
+comp_criterion: margin
+comp_margin: 1.0
+comp_target: False
+comp_wt: 0.0
+
+suff_criterion: margin
+suff_margin: 0.1
+suff_target: False
+suff_wt: 0.0
+
+plaus_wt: 0.0
+
+save_outputs: False
+exp_id: null
+attr_scaling: 1
+anno_method: instance
+compute_attr: False
