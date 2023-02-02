@@ -4,22 +4,30 @@ This is the code for the paper titled
 
 This is the code and the dataset for the paper titled 
 
->[ER-Test: Evaluating Explanation Regularization Methods for Language Models. *Brihi Joshi\*, Aaron Chan\*, Ziyi Liu\*, Shaoliang Nie, Maziar Sanjabi, Hamed Firooz, Xiang Ren*](https://arxiv.org/abs/2205.12542)
+>[ER-Test: Evaluating Explanation Regularization Methods for Language Models. *Brihi Joshi\*, Aaron Chan\*, Ziyi Liu\*, Shaoliang Nie, Maziar Sanjabi, Hamed Firooz, Xiang Ren*](https://aclanthology.org/2022.findings-emnlp.242/)
 
 accepted at [Findings of EMNLP 2022](https://2022.emnlp.org/).
 
 If you end up using this code or the data, please cite our paper: 
 
 ```
-@misc{er_test,
-  doi = {10.48550/ARXIV.2205.12542},
-  url = {https://arxiv.org/abs/2205.12542},
-  author = {Joshi, Brihi and Chan, Aaron and Liu, Ziyi and Nie, Shaoliang and Sanjabi, Maziar and Firooz, Hamed and Ren, Xiang},
-  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {ER-TEST: Evaluating Explanation Regularization Methods for NLP Models},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International}
+=@inproceedings{joshi-etal-2022-er,
+    title = "{ER}-Test: Evaluating Explanation Regularization Methods for Language Models",
+    author = "Joshi, Brihi  and
+      Chan, Aaron  and
+      Liu, Ziyi  and
+      Nie, Shaoliang  and
+      Sanjabi, Maziar  and
+      Firooz, Hamed  and
+      Ren, Xiang",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.findings-emnlp.242",
+    pages = "3315--3336",
+    abstract = "By explaining how humans would solve a given task, human rationales can provide strong learning signal for neural language models (NLMs). Explanation regularization (ER) aims to improve NLM generalization by pushing the NLM{'}s machine rationales (Which input tokens did the NLM focus on?) to align with human rationales (Which input tokens would humans focus on). Though prior works primarily study ER via in-distribution (ID) evaluation, out-of-distribution (OOD) generalization is often more critical in real-world scenarios, yet ER{'}s effect on OOD generalization has been underexplored.In this paper, we introduce ER-Test, a framework for evaluating ER models{'} OOD generalization along three dimensions: unseen datasets, contrast set tests, and functional tests. Using ER-Test, we comprehensively analyze how ER models{'} OOD generalization varies with the rationale alignment criterion (loss function), human rationale type (instance-level v/s task-level), number and choice of rationale-annotated instances, and time budget for rationale annotation. Across two tasks and six datasets, we show that ER has little impact on ID performance but yields large OOD performance gains, with the best ER criterion being task-dependent. Also, ER can improve OOD performance even with task-level or few human rationales. Finally, we find that rationale annotation is more time-efficient than label annotation for improving OOD performance. Our results with ER-Test help demonstrate ER{'}s utility and establish best practices for using ER effectively.",
 }
 ```
 
