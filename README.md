@@ -11,7 +11,7 @@ accepted at [Findings of EMNLP 2022](https://2022.emnlp.org/).
 If you end up using this code or the data, please cite our paper: 
 
 ```
-=@inproceedings{joshi-etal-2022-er,
+@inproceedings{joshi-etal-2022-er,
     title = "{ER}-Test: Evaluating Explanation Regularization Methods for Language Models",
     author = "Joshi, Brihi  and
       Chan, Aaron  and
